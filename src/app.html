@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- <script>
+			(function () {
+			  var webSdkScript = document.createElement("script");
+			
+			  webSdkScript.src =
+				"https://unpkg.com/@grafana/faro-web-sdk@^1.0.0/dist/bundle/faro-web-sdk.iife.js";
+			
+			  webSdkScript.onload = () => {
+				window.GrafanaFaroWebSdk.initializeFaro({
+				  url: "https://faro-collector-prod-ap-south-0.grafana.net/collect/360df4b5cb97fdfc2b05e2d03376e4c9",
+				  app: {
+					name: "svelte-faro-app",
+					version: "1.0.0",
+					environment: "production",
+				  },
+				  
+				});
+			
+			
+				// Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
+				// This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
+				var webTracingScript = document.createElement("script");
+			
+				webTracingScript.src =
+				  "https://unpkg.com/@grafana/faro-web-tracing@^1.0.0/dist/bundle/faro-web-tracing.iife.js";
+			
+				// Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
+				webTracingScript.onload = () => {
+				  window.GrafanaFaroWebSdk.faro.instrumentations.add(
+					new window.GrafanaFaroWebTracing.TracingInstrumentation()
+				  );
+				};
+			
+				// Append the Web Tracing script script tag to the HTML page
+				document.head.appendChild(webTracingScript);
+			  };
+			
+			  // Append the Web-SDK script script tag to the HTML page
+			  document.head.appendChild(webSdkScript);
+			})();
+			</script> -->
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
