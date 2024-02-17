@@ -2,6 +2,8 @@
 
 Faro integration in Svelte App
 
+![Screenshot 2024-02-17 at 11 54 16 AM](https://github.com/AyanBhadury/faro-svelte-app/assets/17782121/176c1510-e4b8-43f5-bd1b-e8f5deda1764)
+
 ## About the project
 
 - Faro implementation is written in /src/frontend_obs.js
